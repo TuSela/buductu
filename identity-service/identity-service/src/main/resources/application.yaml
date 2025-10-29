@@ -1,0 +1,13 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /identity
+spring:
+  datasource:
+    url: jdbc:sqlserver://localhost:1433;databaseName=identity-service;encrypt=false;trustServerCertificate=true
+    username: sa
+    password: Buitu@123
+jpa:
+  hibernate:
+    ddl-auto: update
+  show-sql: true
