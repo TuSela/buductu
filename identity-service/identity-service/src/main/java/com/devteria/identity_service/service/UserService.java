@@ -12,15 +12,14 @@ public class UserService {
     private UserRepository userRepository;
 
     public User createRequest(UserCreationRequest request){
-        User user = new User();
+        User users = new User();
 
-        user.setUsername(request.getUsername());
-        user.setPassword(request.getPassword());
-        user.setFirstName(request.getFirstName());
-        user.setLastName(request.getLastName());
-        user.setDob(request.getDob());
+        users.setUsername(request.getUsername());
+        users.setPassword(request.getPassword());
+        users.setFirstName(request.getFirstName());
+        users.setLastName(request.getLastName());
+        users.setDob(request.getDob());
 
-        userRepository.save(user);
-        return user;
+       return userRepository.save(users);
     }
 }

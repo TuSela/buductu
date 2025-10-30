@@ -4,9 +4,9 @@ server:
     context-path: /identity
 spring:
   datasource:
-    url: jdbc:sqlserver://localhost:1433;databaseName=identity-service;encrypt=false;trustServerCertificate=true
+    url: jdbc:sqlserver://localhost;databaseName=identity-service;encrypt=false;trustServerCertificate=true
     username: sa
-    password: Buitu@123
+    password: 123
 jpa:
   hibernate:
     ddl-auto: update
