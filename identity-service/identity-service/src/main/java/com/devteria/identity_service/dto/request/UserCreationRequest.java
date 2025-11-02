@@ -1,6 +1,5 @@
 package com.devteria.identity_service.dto.request;
 
-import com.devteria.identity_service.exception.ErrorCode;
 import jakarta.validation.constraints.Size;
 
 public class UserCreationRequest {

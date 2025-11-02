@@ -10,13 +10,13 @@ import java.util.NoSuchElementException;
 
 @ControllerAdvice
 public class GlobalExceptionHandler {
-    @ExceptionHandler(value = Exception.class)
-    ResponseEntity<ApiResponse> handleAppException(Exception ex){
-        ApiResponse apiResponse = new ApiResponse();
-        apiResponse.setCode(ErrorCode.UNAUTHORIZED.getCode());
-        apiResponse.setMessage(ErrorCode.UNAUTHORIZED.getMessage());
-        return ResponseEntity.badRequest().body(apiResponse);
-    }
+//    @ExceptionHandler(value = Exception.class)
+//    ResponseEntity<ApiResponse> handleAppException(Exception ex){
+//        ApiResponse apiResponse = new ApiResponse();
+//        apiResponse.setCode(ErrorCode.UNAUTHORIZED.getCode());
+//        apiResponse.setMessage(ErrorCode.UNAUTHORIZED.getMessage());
+//        return ResponseEntity.badRequest().body(apiResponse);
+//    }
 
     @ExceptionHandler(value = AppException.class)
     ResponseEntity<ApiResponse> handleAppException(AppException ex){

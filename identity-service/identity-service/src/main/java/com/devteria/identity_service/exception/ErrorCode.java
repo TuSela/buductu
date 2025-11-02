@@ -1,7 +1,10 @@
 package com.devteria.identity_service.exception;
 
 public enum ErrorCode {
+
     USER_ID_NOT_EXISTED(1004,"USER_ID_NOT_EXISTED"),
+    USER_NOT_EXISTED(1006,"USER_NOT_EXISTED"),
+    UNUATHENTICATION(1006,"UNUATHENTICATION"),
     USERNAME_INVALID(1003,"username is invalid"),
     PASSWORD_INVALID(1005,"password is invalid"),
     UNAUTHORIZED(9999, "Unauthorized"),
