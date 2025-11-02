@@ -1,7 +1,12 @@
 package com.devteria.identity_service.dto.request;
 
+import com.devteria.identity_service.exception.ErrorCode;
+import jakarta.validation.constraints.Size;
+
 public class UserCreationRequest {
+    @Size(min = 3, max = 50 ,message = "USERNAME_INVALID")
     private String username;
+    @Size(min = 8, message = "password must be at least 8 characters")
     private String password;
     private String firstName;
     private String lastName;

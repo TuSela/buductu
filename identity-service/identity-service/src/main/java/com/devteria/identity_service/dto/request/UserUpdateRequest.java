@@ -1,6 +1,9 @@
 package com.devteria.identity_service.dto.request;
 
+import jakarta.validation.constraints.Size;
+
 public class UserUpdateRequest {
+    @Size(min = 3, message = "Password is invalid" )
     private String password;
     private String firstName;
     private String lastName;
