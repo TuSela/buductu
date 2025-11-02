@@ -32,6 +32,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(value = MethodArgumentNotValidException.class)
     ResponseEntity<ApiResponse> handleException(MethodArgumentNotValidException ex){
+
         String enumkey = ex.getBindingResult().getFieldError().getDefaultMessage();
         ErrorCode errorCode = ErrorCode.valueOf(enumkey);
         ApiResponse apiResponse = new ApiResponse();
@@ -46,4 +47,5 @@ public class GlobalExceptionHandler {
         apiResponse.setMessage(ErrorCode.USER_ID_NOT_EXISTED.getMessage());
         return ResponseEntity.badRequest().body(apiResponse);
     }
+
 }

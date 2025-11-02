@@ -41,9 +41,7 @@ public class UserService {
 
     public User userUpdate(String userID, UserUpdateRequest request)
     {
-        if(userRepository.existsById(userID)){
 
-        }
          User user = getUserById(userID);
          user.setPassword(request.getPassword());
          user.setFirstName(request.getFirstName());
