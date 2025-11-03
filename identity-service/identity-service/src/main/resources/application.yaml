@@ -11,3 +11,5 @@ jpa:
   hibernate:
     ddl-auto: update
   show-sql: true
+jwt:
+  singerKey: "g/Y81rnu6xcnhyvHBgPjWuqmR0H@oVbHqyp/Pc23s4gtJgu$2jK7FBsW+T#P/Y0Z6XYvbGLY0S3jD5s8Znmsdg=="
