@@ -83,7 +83,7 @@ public class AuthenticationService {
         Date expityTime = signedJWT.getJWTClaimsSet().getExpirationTime();
 
         var verified= signedJWT.verify(verifier);
-
+        System.out.println("xin chao");
         IntrospectResponse introspectResponse = new IntrospectResponse();
         introspectResponse.setValid(verified && expityTime.after(new Date()));
         return introspectResponse;
