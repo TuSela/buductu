@@ -23,6 +23,7 @@ public class UserController {
         apiResponse.setResult(userService.createUser(request));
         return apiResponse;
     }
+
     @GetMapping()
     public ApiResponse<List<User>>  getUsers()
     {
@@ -30,6 +31,7 @@ public class UserController {
         apiResponse.setResult(userService.getUsers());
         return apiResponse;
     }
+
     @GetMapping("/{userId}")
     public ApiResponse<User> getUser(@PathVariable String userId)
     {
@@ -37,6 +39,7 @@ public class UserController {
         apiResponse.setResult(userService.getUserById(userId));
         return  apiResponse;
     }
+
     @PutMapping("/{userId}")
     public ApiResponse<User> upDateUser(@PathVariable String userId, @RequestBody @Valid UserUpdateRequest request){
         ApiResponse<User> apiResponse = new ApiResponse<>();

@@ -30,7 +30,7 @@ public class AuthenticationService {
     private static final Logger log = LoggerFactory.getLogger(AuthenticationService.class);
     @Autowired
     private UserRepository userRepository;
-    @Value("${jwt.singerKey}")
+    @Value("${jwt.signerKey}")
     protected String SIGNER_KEY;
 
     public AuthenticationResponse authenticate(AuthenticationRequest request) {
@@ -48,7 +48,6 @@ public class AuthenticationService {
         authenticationResponse.setAuthenticated(true);
         return authenticationResponse;
    }
-
 
    private String generateToken(String username) {
        JWSHeader header = new JWSHeader(JWSAlgorithm.HS512);
