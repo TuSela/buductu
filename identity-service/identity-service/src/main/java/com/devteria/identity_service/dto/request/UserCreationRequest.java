@@ -2,6 +2,8 @@ package com.devteria.identity_service.dto.request;
 
 import jakarta.validation.constraints.Size;
 
+import java.util.Set;
+
 public class UserCreationRequest {
     @Size(min = 3, max = 50 ,message = "USERNAME_INVALID")
     private String username;

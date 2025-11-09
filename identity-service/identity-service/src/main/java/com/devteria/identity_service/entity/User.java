@@ -2,6 +2,8 @@ package com.devteria.identity_service.entity;
 
 import jakarta.persistence.*;
 
+import java.util.Set;
+
 @Entity
 @Table(name = "users")
 public class User {
@@ -13,6 +15,14 @@ public class User {
     private String firstName;
     private String lastName;
     private String dob;
+    private Set<String> roles;
+
+    public Set<String> getRoles() {
+        return roles;
+    }
+    public void setRoles(Set<String> roles) {
+        this.roles = roles;
+    }
 
     public String getId() {
         return id;

@@ -57,6 +57,7 @@ public class AuthenticationService {
                .issuer("shopquanao.com")
                .issueTime(new Date())
                .expirationTime(new Date(Instant.now().plus(1, ChronoUnit.HOURS).toEpochMilli()))
+               . claim("scope","Custom")
                .build();
        Payload payload =new Payload(jwtClaimsSet.toJSONObject());
 
